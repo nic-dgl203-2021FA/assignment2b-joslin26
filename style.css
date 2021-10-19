@@ -38,8 +38,10 @@ h1 {
 }
 
 
-h2 {
-    animation-name: typing 3s steps(5),
+/* ############ typing animation ############ */
+
+p {
+    animation-name: typing 3s steps(19),
                     blinking 0.5s steps(1) infinite; 
 }
 
@@ -87,7 +89,7 @@ h2 {
   }
 
 
-/* ############  ############ */
+/* ############ cloud animation ############ */
 
 .cloud01 {
     animation: float 25s linear infinite;
@@ -106,11 +108,27 @@ h2 {
         transform: translateX(820px);
     }
 }
+/* ############ flip animation  ############ */
+
+h2 {
+    font-size: 5em;
+    font-weight:900;
+    text-align: center;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
 
 
+@keyframes flip {
+    0%, 100% {transform:rotateX(90deg) rotateZ(0deg);
+    animation-timing-function: 1s;}
+    50% {transform:rotateX(-180deg) rotateX(10deg);
+    animation-timing-function: 1s;}
+}
 
-
-
+span {
+    animation: flip 1s linear forwards;
+}
 
 /* ############ (responsive) ############ */
 
