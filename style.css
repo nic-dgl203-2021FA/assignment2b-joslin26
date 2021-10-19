@@ -24,13 +24,16 @@ body {
     display: flex;
     justify-content: center;
     margin: auto; 
-    transition: 0.5s;
+    transition: background 0.4s ease-in,
+                transform .2s ease-out,
+                border-style .3s ease-in;
 }
 
 .button:hover {
     background-color: pink;
     transform: scale(1.2);
     color:rebeccapurple;
+    border-style: dashed;
   }
 
 
