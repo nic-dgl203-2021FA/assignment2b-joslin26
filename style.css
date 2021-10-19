@@ -5,6 +5,12 @@ body {
     grid-gap: 20px; 
 }
 
+
+.img1 {
+    transform: translate(100px, 200px) scale(2);
+}
+
+
 /* ############ button ############ */
 
 .button {
@@ -18,10 +24,13 @@ body {
     display: flex;
     justify-content: center;
     margin: auto; 
+    transition: 0.5s;
 }
 
 .button:hover {
     background-color: pink;
+    transform: scale(1.2);
+    color:rebeccapurple;
   }
 
 
