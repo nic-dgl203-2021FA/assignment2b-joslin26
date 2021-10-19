@@ -1,14 +1,28 @@
 body {
     display: grid;
-    grid-template-columns: 10px 2fr 10px;
+    grid-template-columns: 1fr 1fr 1fr 10px;
     grid-template-rows: 1fr 1fr 20px;
     grid-gap: 20px; 
 }
 
 
-.img1 {
-    transform: translate(100px, 200px) scale(2);
+
+.image {
+    animation-name: move;
+    animation-duration: 3s;
+    animation-fill-mode: forwards; 
+    animation-timing-function: ease-in;
 }
+
+@keyframes move {
+    100% {
+        transform: translateX(700%);
+    }
+}
+
+
+
+
 
 @keyframes scaleIn {
     0% {transform: scale(.2);}
@@ -19,6 +33,32 @@ body {
 h1 {
     animation-name: scaleIn;
     animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+
+h2 {
+    animation-name: typing 3s steps(5),
+                    blinking 0.5s steps(1) infinite; 
+}
+
+@keyframes typing {
+    0% {
+        width:0px;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blinking {
+    0%, 100% {
+        border-color: transparent;
+    }
+    100% {
+        color:teal;
+    }
 }
 
 /* ############ button ############ */
@@ -47,20 +87,24 @@ h1 {
   }
 
 
-/* ############ (min-width: 700px) ############ */
+/* ############  ############ */
 
-@media screen and (min-width: 700px) {
+.cloud01 {
+    animation: float 25s linear infinite;
+}
 
-    body {
-        max-width: none;
-        display: grid; 
-        grid-template-columns: 15 em auto;
+.cloud02 {
+    animation: float 30s 5s linear infinite backwards; 
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateX(-150px);
     }
-
-
-
-
-
+    100% {
+        transform: translateX(820px);
+    }
 }
 
 
@@ -68,10 +112,22 @@ h1 {
 
 
 
-/* ############ (min-width: 1000px) ############ */
+/* ############ (responsive) ############ */
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 750px) {
+    body {
+        display: grid; 
+        grid-template-rows: 1fr 20px;
+        grid-template-columns: 1fr 1fr 1fr 10px;
+    }
+}
 
+
+
+@media screen and (max-width: 749px) {
+    body {
+        display: grid; 
+    }
 }
 
 
