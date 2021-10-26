@@ -112,7 +112,13 @@ nav {
     color: white;
 }
 
-
+.logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 150px;
+}
 
 
 /* Projects
