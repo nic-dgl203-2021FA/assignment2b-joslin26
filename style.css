@@ -130,6 +130,102 @@ span {
     animation: flip 1s linear forwards;
 }
 
+/* ############ SVG Animation ############ */
+
+#boo1 {
+    animation: beat .8s linear, 
+    fade 0.25s reverse both; 
+}
+
+#outline1 {
+    animation: beat .8s linear, 
+    fade 0.25s reverse both; 
+}
+
+.face {
+    width: 100px;
+    offset-path: path('M39.583,761.742c825.463,114.186,1935,189.305,1235.186-314.474C1026.544,266.83,787.142,120.766,564.178,38.743,332.3-24.131,24.523,129.364,197.486,331.225,454.193,629.749,758.274,811.749,1091.42,922.272');
+    animation: fly 9s cubic-bezier(.22, 0, .76, 1) both;
+}
+
+@keyframes fly {
+    0% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+
+@keyframes beat {
+    0% {
+        transform: scale(0.1);
+    }
+    80% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* ############ dynamic animation  ############ */
+
+:root {
+    --dist: 0%;
+    --scale: 2;
+    --deg: 10deg;
+}
+
+p {
+    animation: moveIn 2s linear both; 
+    margin: 0.75rem 0;
+}
+
+@keyframes moveIn {
+    0% {
+        transform: translateX(-325%) scale(1) rotate(0deg);
+    }
+    100% {
+        transform: translateX(var(--dist)) scale(var(--scale)) rotate(--deg);
+    }
+}
+
+p:nth-of-type(1) {
+    --scale: 1.5;
+    --dist: 80%;
+    --deg: 5deg;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+p:nth-of-type(2) {
+    --scale: 1.5;
+    --dist: 30%;
+    color:blue;
+}
+
+p:nth-of-type(3) {
+    --deg: -5deg;
+    --dist: 100%;
+    color:green;
+}
+
+p:nth-of-type(4) {
+    --scale: 1.9;
+    --deg:15deg;
+    color:red;
+}
+
 /* ############ (responsive) ############ */
 
 @media screen and (min-width: 750px) {
