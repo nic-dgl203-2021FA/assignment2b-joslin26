@@ -30,7 +30,7 @@ body {
     100% {transform:scale(1);}
 }
 
-h1 {
+h2 {
     animation-name: scaleIn;
     animation-duration: 2s;
     animation-delay: 1s;
@@ -132,31 +132,15 @@ span {
 
 /* ############ SVG Animation ############ */
 
-#boo1 {
+#boo {
     animation: beat .8s linear, 
     fade 0.25s reverse both; 
 }
 
-#outline1 {
+#outline {
     animation: beat .8s linear, 
     fade 0.25s reverse both; 
 }
-
-.face {
-    width: 100px;
-    offset-path: path('M39.583,761.742c825.463,114.186,1935,189.305,1235.186-314.474C1026.544,266.83,787.142,120.766,564.178,38.743,332.3-24.131,24.523,129.364,197.486,331.225,454.193,629.749,758.274,811.749,1091.42,922.272');
-    animation: fly 9s cubic-bezier(.22, 0, .76, 1) both;
-}
-
-@keyframes fly {
-    0% {
-        offset-distance: 0%;
-    }
-    100% {
-        offset-distance: 100%;
-    }
-}
-
 
 @keyframes beat {
     0% {
@@ -178,6 +162,25 @@ span {
         opacity: 0;
     }
 }
+/* ############ path animation ############ */
+
+.path {
+    width: 100px;
+    offset-path: path('M39.583,301.132c246.532,42.848,577.9,71.036,368.9-118.005C334.348,115.418,262.849,60.608,196.258,29.83c-69.252-23.594-161.173,34-109.516,109.753C163.41,251.6,254.227,319.9,353.724,361.371');
+
+}
+
+@keyframes fly {
+    0% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+
+
 /* ############ dynamic animation  ############ */
 
 :root {
@@ -225,6 +228,32 @@ p:nth-of-type(4) {
     --deg:15deg;
     color:red;
 }
+
+
+/* ############ animating variable fonts ############ */
+
+h1 {
+    font-family: "Recursive VF", sans-serif;
+    font-size: 10rem;
+
+    animation: vars 8s infinite linear; 
+}
+
+@keyframes vars {
+    0% {
+        font-variation-settings: "CASL" 1, "CRSV" 1, "wght" 300, "slnt" 0;
+    }
+    25% {
+        font-variation-settings: "CASL" 0, "CRSV" 0, "wght" 600, "slnt" -10;
+    }
+    75% {
+        font-variation-settings: "CASL" 0, "CRSV" 0, "wght" 300, "slnt" -10;
+    }
+}
+
+
+
+
 
 /* ############ (responsive) ############ */
 
