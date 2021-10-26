@@ -133,13 +133,13 @@ span {
 /* ############ SVG Animation ############ */
 
 #boo {
-    animation: beat .8s linear, 
+    animation: beat .7s linear, 
     fade 0.25s reverse both; 
 }
 
 #outline {
-    animation: beat .8s linear, 
-    fade 0.25s reverse both; 
+    animation: fade .3s .4s linear,
+    fade 0.2s reverse both; 
 }
 
 @keyframes beat {
