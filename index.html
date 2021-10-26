@@ -1,26 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
-    <title>Animatitons</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joslin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <main>
+      <!-- ***********************  ABOUT / PROFILE  *********************** -->
+      <header>
+        <div class="content-wrap">
+          <h1>Joslin</h1>
+          <h2>Communications Design Student</h2>
+          <p>Communications Design student from Saskatchewan</p>
+        </div>
+        <div class="content-wrap nav">
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#work-experience">Work Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact Info</a></li>
+          </ul>
+        </div>
+      </header>
 
-<body>
-    <h1>Animations</h1>
+      <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
+      <section class="projects" id="projects">
+        <div class="content-wrap divider">
+          <h2>Featured Projects</h2>
+          <p>View selected projects below.</p>
 
-    <button type="button" class="button">Click Here!</button>
+          <!-- Copy the whole <section> block to add more projects. -->
+          <section class="project-item">
+            <img src="images/wanuskewin.jpg" alt="wanuskewin">
+            <h3>Project Name</h3>
+            <p>This is a photo I took for FIN247 Digital Photography. I took this photo at Wanuskewin Heritage Park. </p>
+              <a class ="btn" href="#" target="_blank">View project / case study</a>
+          </section>
+          <section class="project-item">
+            <img src="images/lemons.jpeg" alt="lemons">
+            <h3>Project Name</h3>
+            <p>This is a charcoal drawing of a bowl of lemons I did for FIN110. </p>
+            <a class ="btn" href="#" target="_blank">View project / case study</a>
+          </section>
+          <section class="project-item">
+            <img src="images/medicinewheel.png" alt="medicinewheel">
+            <h3>Project Name</h3>
+            <p>This is a poster I made for DGL103. This poster is meant as an ad for Missing and Murdered Indigenous Women (MMIW).</p>
+            <a class ="btn" href="#" target="_blank">View project / case study</a>
+          </section>
 
-    <p>Hello. How are you?</p>
-
-    <h2><span>Happy</span></h2>
 
 
-    <img src="img/cloud01.svg" alt="cloud01" class="cloud cloud01">
-    <img src="img/cloud02.svg" alt="cloud02" class="cloud cloud02">
+        <!-- code copied from: https://www.cssscript.com/simple-responsive-css-modal-dialog/ -->
+          <section class="project-item">
+            <img src="images/book_cover.png" alt="book_cover">
+            <h3>Project Name</h3>
+            <p>This another poster I made for DGL103. It is mean to be a book cover for a novel.</p>
 
 
-</body>
+            <div class="modal-container">
+            <input id="modal-toggle" type="checkbox">
+            <button>View project</button>
+            <div class="modal-backdrop">
+              <div class="modal-content">
+                <label class="modal-close" for="modal-toggle">x</label>
+                <h2>Hello</h2>
+                <hr />
+                <p>How are you.</p>
+                <label class="modal-close button" for="modal-toggle">Close</label>
+              </div>
+            </div>
+          </div>
 
+          </section>
+
+
+
+
+
+
+
+          <!-- End of Project block. -->
+        </div>
+      </section>
+
+      <!-- ***********************  WORK EXPERIENCE  *********************** -->
+      <section class="work-experience" id="work-experience">
+        <div class="content-wrap item-details divider">
+          <h2>Work Experience</h2>
+
+          <!-- Copy this whole <section> block to add more jobs. -->
+          <section class="job-item">
+            <div class="job-details">
+              <h3>Design Student</h3>
+              <p>Medicine Hat College</p>
+              <p>Summer 2021</p>
+            </div>
+            <div class="job-summary">
+              <p>Develop content and assist with branding and communications.</p>
+              </ul>
+            </div>
+
+        </section>
+        <!-- End of Job block. -->
+        </div>
+
+
+
+
+        
+
+      </section>
+
+      <!-- ******************  EDUCATION & CERTIFICATIONS ****************** -->
+      <section class="education" id="education">
+        <div class="content-wrap item-details">
+          <h2>Education</h2>
+
+          <!-- Copy this whole <section> block to add more schools. -->
+          <section>
+            <h3>University of Saskatchewan - Saskatoon</h3>
+            <p>Bachelor of Commerce, 2013</p>
+          </section>
+          <section>
+            <h3>University of Saskatchewan - Saskatoon</h3>
+            <p>Communications Design, expected gradutation date 2022</p>
+          </section>
+          <!-- End of School block. -->
+        </div>
+      </section>
+
+      <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
+      <footer>
+        <div class="content-wrap contact" id="contact">
+          <h2>Let's Keep in Touch!</h2>
+
+          <!-- Social media and contact links. Add or remove any networks. -->
+          <ul class="contact-list">
+            <li><a href="mailto:jsanger@northislandcollege.ca">jsanger@northislandcollege.ca</a></li>
+            <li><a href="http://yourwebsite.com" target="_blank">yourwebsite.com</a></li>
+            <li><a href="#" target="_blank">Twitter</a></li>
+            <li><a href="#" target="_blank">LinkedIn</a></li>
+            <li><a href="#" target="_blank">Facebook</a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>
