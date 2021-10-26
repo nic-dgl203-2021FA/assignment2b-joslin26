@@ -91,9 +91,14 @@ ul {
     padding: 0;
 }
 
+nav {
+    border-bottom: 2px solid whitesmoke;
+    border-top: 2px solid whitesmoke;
+}
+
 .nav a {
     color: #AFD5AA;
-    float: left; 
+    float: right; 
     padding: 15px 15px;
     text-decoration: none;
     font-size: 15px;
