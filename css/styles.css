@@ -386,3 +386,264 @@ footer {
         padding: 5px;
     }
 }
+
+
+
+
+
+
+
+
+
+/* other styles below
+-------------------------- */
+
+
+
+
+
+.image {
+    animation-name: move;
+    animation-duration: 3s;
+    animation-fill-mode: forwards; 
+    animation-timing-function: ease-in;
+}
+
+@keyframes move {
+    100% {
+        transform: translateX(700%);
+    }
+}
+
+
+
+
+
+@keyframes scaleIn {
+    0% {transform: scale(.2);}
+    85% {transform:scale(1.1);}
+    100% {transform:scale(1);}
+}
+
+h2 {
+    animation-name: scaleIn;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+
+/* ############ typing animation ############ */
+
+p {
+    animation-name: typing 3s steps(19),
+                    blinking 0.5s steps(1) infinite; 
+}
+
+@keyframes typing {
+    0% {
+        width:0px;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blinking {
+    0%, 100% {
+        border-color: transparent;
+    }
+    100% {
+        color:teal;
+    }
+}
+
+/* ############ button ############ */
+
+.button {
+    background: orangered;
+    border-bottom: none;
+    border-radius: 4px;
+    color: black;
+    width: 20%;
+    padding: 0.25rem 0.6rem;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    margin: auto; 
+    transition: background 0.4s ease-in,
+                transform .2s ease-out,
+                border-style .3s ease-in;
+}
+
+.button:hover {
+    background-color: pink;
+    transform: scale(1.2);
+    color:rebeccapurple;
+    border-style: dashed;
+  }
+
+
+/* ############ cloud animation ############ */
+
+.cloud01 {
+    animation: float 25s linear infinite;
+}
+
+.cloud02 {
+    animation: float 30s 5s linear infinite backwards; 
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateX(-150px);
+    }
+    100% {
+        transform: translateX(820px);
+    }
+}
+/* ############ flip animation  ############ */
+
+h2 {
+    text-align: center;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+
+@keyframes flip {
+    0%, 100% {transform:rotateX(90deg) rotateZ(0deg);
+    animation-timing-function: 1s;}
+    50% {transform:rotateX(-180deg) rotateX(10deg);
+    animation-timing-function: 1s;}
+}
+
+span {
+    animation: flip 1s linear forwards;
+}
+
+/* ############ SVG Animation ############ */
+
+#boo {
+    animation: beat .7s linear, 
+    fade 0.25s reverse both; 
+}
+
+#outline {
+    animation: fade .3s .4s linear,
+    fade 0.2s reverse both; 
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(0.1);
+    }
+    80% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* ############ path animation ############ */
+
+.path {
+    width: 100px;
+    offset-path: path('M39.583,301.132c246.532,42.848,577.9,71.036,368.9-118.005C334.348,115.418,262.849,60.608,196.258,29.83c-69.252-23.594-161.173,34-109.516,109.753C163.41,251.6,254.227,319.9,353.724,361.371');
+
+}
+
+@keyframes fly {
+    0% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+
+
+/* ############ dynamic animation  ############ */
+
+:root {
+    --dist: 0%;
+    --scale: 2;
+    --deg: 10deg;
+}
+
+p {
+    animation: moveIn 2s linear both; 
+    margin: 0.75rem 0;
+}
+
+@keyframes moveIn {
+    0% {
+        transform: translateX(-325%) scale(1) rotate(0deg);
+    }
+    100% {
+        transform: translateX(var(--dist)) scale(var(--scale)) rotate(--deg);
+    }
+}
+
+p:nth-of-type(1) {
+    --scale: 1.5;
+    --dist: 80%;
+    --deg: 5deg;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+p:nth-of-type(2) {
+    --scale: 1.5;
+    --dist: 30%;
+    color:#7e7e85;
+}
+
+p:nth-of-type(3) {
+    --deg: -5deg;
+    --dist: 100%;
+    color: #E9CE2C;
+}
+
+p:nth-of-type(4) {
+    --scale: 1.9;
+    --deg:15deg;
+    color:red;
+}
+
+
+/* ############ animating variable fonts ############ */
+
+h1 {
+    animation: vars 8s infinite linear; 
+}
+
+@keyframes vars {
+    0% {
+        font-variation-settings: "CASL" 1, "CRSV" 1, "wght" 300, "slnt" 0;
+    }
+    25% {
+        font-variation-settings: "CASL" 0, "CRSV" 0, "wght" 600, "slnt" -10;
+    }
+    75% {
+        font-variation-settings: "CASL" 0, "CRSV" 0, "wght" 300, "slnt" -10;
+    }
+}
+
+
+
+
+.background {
+    background: #dfcbd3;
+}
