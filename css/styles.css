@@ -91,21 +91,44 @@ ul {
     padding: 0;
 }
 
-nav {
-    border-bottom: 2px solid whitesmoke;
-    border-top: 2px solid whitesmoke;
+.hamburger {
+    padding: 1rem;
+    position: absolute;
+    z-index: 1000;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    display:flex;
+    text-align: center;
+
+    transform: translateY(-100%);
+    transition: transform 0.2 ease;
+}
+
+nav:target {
+    transform: translateY(0);
+}
+
+nav ul{ 
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
 }
 
 .nav a {
     color: #AFD5AA;
-    float: right; 
     padding: 15px 15px;
     text-decoration: none;
     font-size: 15px;
 }
 
 .nav a:hover {
-    color:rgba(182, 64, 29, 0.8);
+    color:rgba(235, 221, 236, 0.8);
 }
 
 .nav a:active {
