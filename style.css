@@ -111,8 +111,6 @@ p {
 /* ############ flip animation  ############ */
 
 h2 {
-    font-size: 5em;
-    font-weight:900;
     text-align: center;
     perspective: 1000px;
     transform-style: preserve-3d;
